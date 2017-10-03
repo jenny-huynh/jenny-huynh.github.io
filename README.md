@@ -1,2 +1,1 @@
-# jenny-huynh.github.io
-jennyhuynh.com
+# jennyhuynh.com
