@@ -1,31 +1,25 @@
-
-<html>
-
-<head>
-	
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-<script type="text/javascript" src="effects.js"></script>
-<meta name="viewport" content="width=device-width">
-<link href="https://fonts.googleapis.com/css?family=GFS+Didot" rel="stylesheet">
-
-<style>
-* {
-    padding: 0;
-    margin: 0;
-}
-body {
+html, body {
+    font: 9.5px;
     font-family: 'Didot';
-    font-weight: 300;
-    letter-spacing: 0.6px;
-    background-image: url("ceasefire.png");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: bottom;
+    color: black;
+    letter-spacing:0.6px;
+    background-color:{color:background};
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:center;
+    font-weight:400;
+    text-align:justify;
 }
+
+p {
+    line-height:18px;
+}
+ 
 a {
-    color: #ccc;
+    color:silver;
     text-decoration:none;
 }
+ 
 a:hover {
     color:black;
     -webkit-transition:all 0.5s;
@@ -34,70 +28,185 @@ a:hover {
     -o-transition:all 0.5s;
     transition:all 0.5s;
 }
+ 
+p a {
+    padding-bottom:3px;
+    border-bottom:1px solid {color:border};
+}
+ 
+p a:hover {
+    border-bottom:1px solid {color:text};
+}
+ 
+blockquote {
+    margin-left:5px;
+    border-left:1px solid {color:border};
+    padding-left:5px;
+}
+ 
+strong {
+    font-weight:700;
+}
 
 img {
-    width: 100%;
-    position: absolute;
-}
-#wrap {
-    background-color: #fff;
-    padding: 50px 100px 50px 100px;
-}
-.name {
-    font-size: 1.2em;
-    font-family: sans-serif;
-    font-weight: 700;
-}
-h2 {
-    display: block;
-}
-.description {
-    font-size: 0.7em;
-    font-weight: 300;
-}
-.navigation {
-    font-size: 0.7em;
-    letter-spacing: -0.2px;
-    padding: 10px 0 0 0;
-}
-.navigation li {
-    display: inline;
-    padding-right: 5px;
-}
-/* ----------------------------------------------------
-        media queries for a responsive layout
----------------------------------------------------- */
-@media(min-width:600px) {
-    .description{
-        font-size: 0.8em;
-    }
-    .navigation {
-        font-size: 0.8em;
-    }
-    .navigation li {
-        display: inline;
-        padding-right: 5px;
-    }
-@media(min-width:800px) {
-    h2 {
-        display: inline;
-    }
-    .description{
-        padding-left: 15px;
-    }
-}
-</style>
 
-</head>
-
-<body>
-    <div id="wrap">
-        <h2 class="name">JENNY HUYNH</h2>
-        <h2 class="description">POLITICAL SCIENCE AND INTERNATIONAL STUDIES.</h2>
-        <ul class="navigation">
-            <li><a href="mailto:jennyh1@student.unimelb.edu.au?Subject=Hello%20Jenny" target="_top">EMAIL</a></li>
-            <li><a href="https://www.linkedin.com/in/hvynh/">LINKEDIN</a></li>
-            <li><a href="http://farragomagazine.com/">FARRAGO</a></li>
-        <ul>
-    </div>
-</body>
+}
+ 
+#container {
+    width:calc(100% - 200px);
+    position:relative;
+    left:100px;
+    margin-top:50px;
+}
+ 
+#header {
+    width:100%;
+    position:absolute !important;
+    z-index:99999;
+    display:inline-block;
+   
+}
+ 
+#header img {
+    width:100%;
+}
+ 
+article {
+    position:relative;
+    margin-bottom:100px;
+    {block:permalinkpage}
+    width:500px!important;
+    display:block;
+    left:50%;
+    margin-left:-250px;
+    {/block:permalinkpage}
+    {block:indexpage}
+    width:calc((100% - 305px)/4);
+    display:inline-block;
+    float:left;
+    {/block:indexpage}
+    -webkit-transition:all 0.5s;
+    -moz-transition:all 0.5s;
+    -ms-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    transition:all 0.5s;
+}
+ 
+#header {
+    position:relative;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:100;
+}
+ 
+#header-bg {
+    width:calc(100% + 18px);
+    left:-10px;
+    top:-10px;
+    position:relative;
+    display:block;
+    height:500px;
+    overflow:hidden;
+    background-image:url();
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+ 
+#header-con {
+    position: fixed;
+    width:calc(100% - 193px);
+    padding:25px 100px 25px 110px;
+    margin-left:-10px;
+    top:50px;
+    background-color:white;
+    z-index:99999999999;
+}
+ 
+#header-con h1 {
+    font:20px 'Montserrat', arial;
+    font-weight:700;
+    display:inline-block;
+    float:left;
+    height:20px;
+    margin:10px 20px 0 0;
+    width:auto;
+    color:{color:header text};
+}
+ 
+#header-con p {
+    display:inline-block;
+    position:relative;
+    color:{color:header text};
+    float:left;
+    margin-top:14px;
+    font-size:8px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+ 
+#header-wrap {
+    display:block;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+}
+ 
+#header-links {
+    display:block;
+    line-height:30px;
+    margin-bottom:10px;
+}
+ 
+#header-links a {
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:{color:header text};
+    margin-right:20px;
+    position:relative;
+    font-size:9px;
+    width:auto;
+    overflow:hidden;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -ms-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+ 
+#header-links a:before {
+    content:"";
+    position:absolute;
+    top:18px;
+    left:0;
+    right:0;
+    width:auto;
+    background:{color:border};
+    height:1px;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -ms-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+ 
+#header-links a:hover:before {
+    box-shadow:inset 150px 0 {color:text};
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -ms-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+ 
+.footer {
+    display:block!important;
+    width:200px;
+    text-align:center;
+    left:50%;
+    position:relative;
+    margin-left:-100px;
+    margin-top:100px;
+    margin-bottom:100px;
+}
